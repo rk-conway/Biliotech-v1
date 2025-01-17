@@ -9,6 +9,7 @@
     --secondary-color: #3C3D37;
     --accent-color: #D84040;
     --text-white: white;
+    --text-grey: rgb(184, 184, 184);
     --padding: 8px 12px;
 }
 
@@ -22,22 +23,32 @@ body{
 .main-container{
     width: 100%;
     min-height: 100vh;
-    border: 2px dashed orange;
+    /* border: 2px dashed orange; */
     display: flex;
     justify-content: center;
 }
 
 .container{
     width: clamp(300px,100%,1000px);
-    border: 2px solid chartreuse;
+    /* border: 2px solid chartreuse; */
     padding: 1rem 2rem;
 }
 
 header{
     display: flex;
-    background-color: #8E1616;
+    align-items: end;
+    /* background-color: #8E1616; */
+    justify-content: space-between;
 }
 
+span{
+    font-size: 1rem;
+}
+
+svg{
+    font-size: 1rem;
+    fill: var(--accent-color);
+}
 
 .realm{
     /* background-color: #2b2525; */
@@ -55,13 +66,44 @@ header{
     gap: 2rem;
 }
 
+.scripture{
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--text-grey);
+}
+
 form{
     display: flex;
     gap: 5px;
 }
+
 select,input{
     padding: var(--padding);
     background: var(--secondary-color);
     border: none;
     border-radius: 8px;
+    color: var(--text-white);
+}
+
+.earth{
+    min-height: 50vh;
+}
+
+p.word{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.angel{
+    margin: 0px auto;
+    svg{
+        width: 3rem;
+        aspect-ratio: 1;
+    }
+}
+
+.angel:hover{
+    background-color: var(--secondary-color);
 }
