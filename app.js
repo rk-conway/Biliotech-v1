@@ -39,6 +39,9 @@ async function fetchData(verseUrl){
 
         const data = await response.json();
         console.log(data);
+        updateAll(data);
+
+
     }
     
     catch(error){
@@ -54,6 +57,11 @@ function getVerse(){
     let verseUrl = "https://bible-api.com/mathew+3:16";
 
     fetchData(verseUrl);
+}
+
+function updateAll(data){
+    updateScripture(data.reference);
+    updateWord(data.text);
 }
 
 getVerse();
