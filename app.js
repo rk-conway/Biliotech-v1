@@ -50,9 +50,13 @@ refresh.onclick = ()=>{
 
 
 
+
 async function fetchData(verseUrl){
     
     try{
+        loading = true;
+        updateWord('');
+        updateScripture('');
         
         const response = await fetch(verseUrl);
         
@@ -72,7 +76,7 @@ async function fetchData(verseUrl){
 }
 
 function getVerse(prompter){
-
+    
     if(prompter){
         book = prompter.book;
         chapter = prompter.chapter;
@@ -85,8 +89,11 @@ function getVerse(prompter){
 }
 
 function updateAll(data){
-    updateScripture(data.reference);
-    updateWord(data.text);
+    if(data){
+        loading = false;
+        updateScripture(data.reference);
+        updateWord(data.text);
+    }
 }
 
 getVerse();
