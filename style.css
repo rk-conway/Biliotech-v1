@@ -110,15 +110,19 @@ select:focus,input:focus{
 }
 
 .submit-btn{
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: var(--primary-color);
     border-radius: 8px;
     padding: 8px 12px;
 }
 
 .submit-btn:hover{
-    color: var(--text-white);
-    background-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
+}
+.submit-btn:active{
+    color: var(--accent-color);
+    background-color: var(--tetiary-color);
 }
 
 .earth{
@@ -138,6 +142,7 @@ p.word{
     display: grid;
     place-items: center;
     margin: 0px auto;
+    border-radius: 50%;
     svg{
         width: 3rem;
         aspect-ratio: 1;
@@ -147,14 +152,18 @@ p.word{
 .angel:hover{
     background-color: var(--secondary-color);
 }
+.angel:active{
+    background-color: var(--tetiary-color);
+}
 
 .hidden{
     display: none;
 }
 
 .loading-bar{
-    width: 100%;
+    width: clamp(100px,100%,500px);
     height: 5px;
+    border-radius: 3px;
     /* background-color: var(--tetiary-color); */
     position: relative;
     overflow: hidden;
@@ -164,11 +173,12 @@ p.word{
     content: '';
     width: 10%;
     height: 5px;
+    border-radius: 3px;
     background-color: var(--accent-color);
     position: absolute;
     left: 0px;
     top: 0px;
-    animation: scanning 1000ms linear infinite reverse;
+    animation: scanning 800ms linear infinite reverse;
 }
 
 @keyframes scanning{
