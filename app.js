@@ -55,8 +55,8 @@ async function fetchData(verseUrl){
     
     try{
         loading = true;
-        updateWord('');
-        updateScripture('');
+        updateWord('loading...');
+        updateScripture('loading...');
         
         const response = await fetch(verseUrl);
         
