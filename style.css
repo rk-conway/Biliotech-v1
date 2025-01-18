@@ -9,7 +9,7 @@
     --secondary-color: #2c2521;
     --tetiary-color: #2c2c2c;
     --accent-color: #D84040;
-    --text-white: white;
+    --text-white: rgb(223, 201, 201);
     --text-grey: rgb(184, 184, 184);
     --padding: 8px 12px;
 }
@@ -123,6 +123,11 @@ p.word{
 }
 
 .angel{
+    width: auto;
+    aspect-ratio: 1;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
     margin: 0px auto;
     svg{
         width: 3rem;
