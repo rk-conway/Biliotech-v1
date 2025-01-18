@@ -7,6 +7,7 @@ window.onload = ()=>{
 const refresh = document.querySelector('.angel');
 const scripture = document.querySelector('.scripture');
 const word = document.querySelector('.word');
+const mode = document.querySelector('.color-mode');
 let loading = true;
 
 
@@ -50,7 +51,13 @@ function lineLoading(){
     }
 }
 
+function changeMode(){
+    document.querySelector('body').classList.toggle('light');
+}
 
+if(mode){
+    mode.onclick = changeMode;
+}
 refresh.onclick = ()=>{
     getVerse({book:'mathew',chapter:3,verse:10})
 }

@@ -13,13 +13,13 @@
     --text-grey: rgb(184, 184, 184);
     --padding: 8px 12px;
 }
-:root{
+.light{
     --primary-color: #F3F4ED;
     --secondary-color: #d7d8d2;
     --tetiary-color: #e8e9e2;
     --accent-color: #C06014;
     --text-white: #536162;
-    --text-grey: rgb(184, 184, 184);
+    --text-grey: rgb(170, 170, 170);
     --padding: 8px 12px;
 }
 
@@ -193,4 +193,8 @@ p.word{
     100%{
         width: 0%;
     }
+}
+
+.color-mode{
+    color: var(--accent-color);
 }
