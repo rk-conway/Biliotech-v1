@@ -13,6 +13,15 @@
     --text-grey: rgb(184, 184, 184);
     --padding: 8px 12px;
 }
+:root{
+    --primary-color: #F3F4ED;
+    --secondary-color: #d7d8d2;
+    --tetiary-color: #e8e9e2;
+    --accent-color: #C06014;
+    --text-white: #536162;
+    --text-grey: rgb(184, 184, 184);
+    --padding: 8px 12px;
+}
 
 body{
     background-color: var(--primary-color);
