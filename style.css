@@ -102,8 +102,14 @@ select:focus,input:focus{
 
 .submit-btn{
     background-color: var(--secondary-color);
+    color: var(--accent-color);
     border-radius: 8px;
     padding: 8px 12px;
+}
+
+.submit-btn:hover{
+    color: var(--text-white);
+    background-color: var(--accent-color);
 }
 
 .earth{

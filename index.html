@@ -63,10 +63,11 @@
                             <option value="3john">3 John</option>
                             <option value="jude">Jude</option>
                             <option value="revelation">Revelation</option>
+                            <option value="book" hidden selected>book</option>
                           </select>
 
-                        <input id="chapter" type="number" min="0" oninput=updateChapter()>
-                        <input id="verse" type="number" min="0" oninput=updateVerse()>
+                        <input id="chapter" type="number" min="0" oninput=updateChapter() placeholder="chapter">
+                        <input id="verse" type="number" min="0" oninput=updateVerse() placeholder="verse">
                         <p class="submit-btn" onclick="getVerse({book:book,chapter:chapter,verse:verse})">get</p>
                     </form>
 
