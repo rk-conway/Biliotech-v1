@@ -43,20 +43,26 @@ function updateScripture(newScripture){
     }
 }
 
-
-refresh.onclick = ()=>{
-    getVerse({book:'mathew',chapter:1,verse:3})
+function lineLoading(){
+    let line = document.querySelector('.loading-bar');
+    if(line){
+        line.classList.toggle('hidden');
+    }
 }
 
 
+refresh.onclick = ()=>{
+    getVerse({book:'mathew',chapter:3,verse:10})
+}
 
 
 async function fetchData(verseUrl){
     
     try{
         loading = true;
-        updateWord('loading...');
+        updateWord('');
         updateScripture('loading...');
+        lineLoading();
         
         const response = await fetch(verseUrl);
         
@@ -93,6 +99,7 @@ function updateAll(data){
         loading = false;
         updateScripture(data.reference);
         updateWord(data.text);
+        lineLoading();
     }
 }
 
