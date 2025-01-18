@@ -85,6 +85,8 @@ async function fetchData(verseUrl){
     
     catch(error){
         console.error(error);
+        updateWord('Verse not found.Try another verse.');
+        updateScripture('error 404');
     }
 }
 
