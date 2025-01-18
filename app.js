@@ -58,9 +58,9 @@ function changeMode(){
 if(mode){
     mode.onclick = changeMode;
 }
-refresh.onclick = ()=>{
-    getVerse({book:'mathew',chapter:3,verse:10})
-}
+// refresh.onclick = ()=>{
+//     getVerse({book:'mathew',chapter:3,verse:10})
+// }
 
 
 async function fetchData(verseUrl){
