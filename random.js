@@ -136,17 +136,24 @@ const newTestamentBooks = [
 
 
 function getRandom(){
-
     let setBook = newTestamentBooks[Math.floor(Math.random()*newTestamentBooks.length)];
-    let book = setBook.name;
-    let chapterVerse = Object.keys(setBook.verses);
-    let chapter = chapterVerse[Math.floor(Math.random()*chapterVerse.length)];
-    let verse = Math.floor(Math.random()*setBook.verses.chapter);
+    let chapters = Object.keys(setBook.verses);
+    let verses = Object.keys(setBook.verses);
     
-    // console.log("This is the number of verses: ",setBook.verses);
+    let book = setBook.name;
+    let chapter = chapters[Math.floor(Math.random()*chapters.length)];
+    console.log("chapter",chapter);
+    
+    let verse = Math.floor(Math.random()*verses[chapter]);
+    console.log("verse",verse);
 
     // console.log("book",book,"chapter",chapter,"verse",verse);
-    return {book:book,chapter:chapter,verse:1};
-}
 
-getRandom();
+    if(chapter===0){
+        chapter=1;
+    }
+    if(verse===0){
+        verse=1;
+    }
+    return {book:book,chapter:chapter,verse:verse};
+}
